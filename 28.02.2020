@@ -1,0 +1,20 @@
+class Wood():
+	def __init__(self, color, tupe, age):
+		self.color = color
+		self.tupe = tupe
+		self.age = age
+
+		def __str__(self):
+			return "Color:", self.color, "Type:", self.tupe, "Age:", self.age
+
+
+class Table(Wood):
+	def __init__(self, color, tupe, age):
+		super().__init__(color, tupe, age)
+
+class Wardrobe(Wood):
+	def __init__(self, color, tupe, age):
+		super().__init__(color, tupe, age)
+
+me = Table("white", "oak", 3)
+u = Wardrobe("brown", "teak", 2)
