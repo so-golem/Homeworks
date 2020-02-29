@@ -13,7 +13,7 @@ window = pygame.display.set_mode((WIDTH, HEIGHT))
 done = False
 me = WIDTH//2
 u = HEIGHT//2
-pygame.draw.square(window, (255,255,255), (me, u), 50)
+pygame.draw.rectangle(window, (255,255,255), (me, u), 50)
 
 speed = 4
 pygame.display.update()
@@ -25,7 +25,7 @@ while not done:
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			done = True
-	pygame.draw.square(window, (255,255,255), (me, u), 50)
+	pygame.draw.rectangle(window, (255,255,255), (me, u), 50)
 	me += speed
 	if me + 50 > WIDTH:
 		speed = -2 * speed
@@ -36,7 +36,7 @@ while not done:
 	if u < 50:
 		speed = -3 * speed
 	pygame.display.update()
-	pygame.draw.square(window, (255,255,255), (me, u), 50)
+	pygame.draw.rectangle(window, (255,255,255), (me, u), 50)
 	if u + 50 > HEIGHT:
 		speed = -1 * speed
 	if u < 50:
